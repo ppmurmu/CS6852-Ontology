@@ -1,0 +1,883 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling"
+         xmlns="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Financial modelling concerned with stocks, mutual funds and financial information</rdfs:comment>
+</owl:Ontology>
+
+<owl:ObjectProperty rdf:about="#belongTo">
+  <rdfs:domain rdf:resource="#Bond"/>
+  <rdfs:range rdf:resource="#Company"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasBondAsset">
+  <rdfs:subPropertyOf rdf:resource="#hasInstrument"/>
+  <rdfs:domain rdf:resource="#MutualFund"/>
+  <rdfs:range rdf:resource="#Bond"/>
+  <owl:propertyDisjointWith rdf:resource="#hasStockAsset"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasInstrument">
+  <owl:inverseOf rdf:resource="#isPartofFund"/>
+  <rdfs:domain rdf:resource="#MutualFund"/>
+  <rdfs:range rdf:resource="#Instrument"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasSentimentValue">
+  <rdfs:domain rdf:resource="#Information"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasStockAsset">
+  <rdfs:subPropertyOf rdf:resource="#hasInstrument"/>
+  <rdfs:domain rdf:resource="#MutualFund"/>
+  <rdfs:range rdf:resource="#Stock"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isPartofFund"/>
+
+<owl:ObjectProperty rdf:about="#trackedBy">
+  <owl:inverseOf rdf:resource="#tracks"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tracks">
+  <rdfs:domain rdf:resource="#MarketIndex"/>
+  <rdfs:range rdf:resource="#AtomicInstrument"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tracksBond">
+  <rdfs:subPropertyOf rdf:resource="#tracks"/>
+  <rdfs:domain rdf:resource="#BondIndex"/>
+  <rdfs:range rdf:resource="#Bond"/>
+  <owl:propertyDisjointWith rdf:resource="#tracksStock"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#tracksStock">
+  <rdfs:subPropertyOf rdf:resource="#tracks"/>
+  <rdfs:domain rdf:resource="#EquityIndex"/>
+  <rdfs:range rdf:resource="#Stock"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#describesAspect">
+  <rdfs:domain rdf:resource="#Information"/>
+  <rdfs:range rdf:resource="#Directionality"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasAspect">
+  <rdfs:domain rdf:resource="#Company"/>
+  <rdfs:range rdf:resource="#Aspect"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#hasPart">
+  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+  <rdfs:domain rdf:resource="#Company"/>
+  <rdfs:range rdf:resource="#CompanyPart"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAboutAspect">
+  <rdfs:domain rdf:resource="#Information"/>
+  <rdfs:range rdf:resource="#Aspect"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#isAboutCompany">
+  <rdfs:domain rdf:resource="#Information"/>
+  <rdfs:range rdf:resource="#Company"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#issuedBy">
+  <owl:inverseOf rdf:resource="#issues"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+  <rdfs:domain rdf:resource="#AtomicInstrument"/>
+  <rdfs:range rdf:resource="#Company"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#issues">
+  <rdfs:range rdf:resource="#AtomicInstrument"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#AtomicInstrument">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Bond"/>
+        <rdf:Description rdf:about="#Stock"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#BondIndex">
+  <rdfs:subClassOf rdf:resource="#MarketIndex"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tracks"/>
+      <owl:allValuesFrom rdf:resource="#Bond"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Branch">
+  <rdfs:subClassOf rdf:resource="#CompanyPart"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DebtFund">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MutualFund"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Bond"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MutualFund"/>
+</owl:Class>
+
+<owl:Class rdf:about="#EquityFund">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#MutualFund"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasInstrument"/>
+          <owl:someValuesFrom rdf:resource="#Stock"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#EquityIndex">
+  <rdfs:subClassOf rdf:resource="#MarketIndex"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tracks"/>
+      <owl:allValuesFrom rdf:resource="#Stock"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#HybridFund">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasBondAsset"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#hasStockAsset"/>
+          <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#MutualFund"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MarketIndex">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tracks"/>
+      <owl:allValuesFrom rdf:resource="#AtomicInstrument"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeCompany">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Company"/>
+        <owl:Restriction>
+          <owl:onProperty>
+            <rdf:Description>
+              <owl:inverseOf rdf:resource="#isAboutCompany"/>
+            </rdf:Description>
+          </owl:onProperty>
+          <owl:someValuesFrom rdf:resource="#NegativeInfo"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Company"/>
+        <owl:Restriction>
+          <owl:onProperty>
+            <rdf:Description>
+              <owl:inverseOf rdf:resource="#isAboutCompany"/>
+            </rdf:Description>
+          </owl:onProperty>
+          <owl:someValuesFrom rdf:resource="#NegativeInfo"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeInfo">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#describesAspect"/>
+              <owl:someValuesFrom rdf:resource="#Decrease"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#isAboutAspect"/>
+              <owl:someValuesFrom rdf:resource="#PositiveAspect"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#describesAspect"/>
+              <owl:someValuesFrom rdf:resource="#Increase"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#isAboutAspect"/>
+              <owl:someValuesFrom rdf:resource="#NegativeAspect"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#describesAspect"/>
+          <owl:someValuesFrom rdf:resource="#NegativeAction"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#describesAspect"/>
+          <owl:someValuesFrom rdf:resource="#NegativeProperty"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Information"/>
+  <owl:disjointWith rdf:resource="#PositiveInfo"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeInstrument">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AtomicInstrument"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#issuedBy"/>
+          <owl:someValuesFrom rdf:resource="#NegativeCompany"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeMutualFund">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasInstrument"/>
+      <owl:someValuesFrom rdf:resource="#NegativeInstrument"/>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasInstrument"/>
+      <owl:someValuesFrom rdf:resource="#NegativeInstrument"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeStock">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Stock"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#issuedBy"/>
+          <owl:someValuesFrom rdf:resource="#NegativeCompany"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveCompany">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Company"/>
+        <owl:Restriction>
+          <owl:onProperty>
+            <rdf:Description>
+              <owl:inverseOf rdf:resource="#isAboutCompany"/>
+            </rdf:Description>
+          </owl:onProperty>
+          <owl:someValuesFrom rdf:resource="#PositiveInfo"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Company"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveInfo">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#describesAspect"/>
+              <owl:someValuesFrom rdf:resource="#Decrease"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#isAboutAspect"/>
+              <owl:someValuesFrom rdf:resource="#NegativeAspect"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Class>
+          <owl:intersectionOf rdf:parseType="Collection">
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#describesAspect"/>
+              <owl:someValuesFrom rdf:resource="#Increase"/>
+            </owl:Restriction>
+            <owl:Restriction>
+              <owl:onProperty rdf:resource="#isAboutAspect"/>
+              <owl:someValuesFrom rdf:resource="#PositiveAspect"/>
+            </owl:Restriction>
+          </owl:intersectionOf>
+        </owl:Class>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#describesAspect"/>
+          <owl:someValuesFrom rdf:resource="#PositiveAction"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#describesAspect"/>
+          <owl:someValuesFrom rdf:resource="#PositiveProperty"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Information"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveInstrument">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#AtomicInstrument"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#issuedBy"/>
+          <owl:someValuesFrom rdf:resource="#PositiveCompany"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveMutualFund">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasInstrument"/>
+      <owl:someValuesFrom rdf:resource="#PositiveInstrument"/>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#hasInstrument"/>
+      <owl:someValuesFrom rdf:resource="#PositiveInstrument"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveStock">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Stock"/>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#issuedBy"/>
+          <owl:someValuesFrom rdf:resource="#PositiveCompany"/>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Store">
+  <rdfs:subClassOf rdf:resource="#CompanyPart"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Subsidary">
+  <rdfs:subClassOf rdf:resource="#CompanyPart"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Action"/>
+
+<owl:Class rdf:about="#Aspect">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NegativeAspect"/>
+        <rdf:Description rdf:about="#PositiveAspect"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Bond">
+  <rdfs:subClassOf rdf:resource="#Instrument"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#issuedBy"/>
+      <owl:onClass rdf:resource="#Company"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Company"/>
+
+<owl:Class rdf:about="#CompanyPart">
+  <rdfs:subClassOf rdf:resource="#PositiveAspect"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Decrease">
+  <rdfs:subClassOf rdf:resource="#Directionality"/>
+  <owl:disjointWith rdf:resource="#Increase"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DecreasingAction">
+  <rdfs:subClassOf rdf:resource="#Action"/>
+  <rdfs:subClassOf rdf:resource="#Decrease"/>
+  <owl:disjointWith rdf:resource="#DecreasingProperty"/>
+</owl:Class>
+
+<owl:Class rdf:about="#DecreasingProperty">
+  <rdfs:subClassOf rdf:resource="#Decrease"/>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Directionality">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#Decrease"/>
+        <rdf:Description rdf:about="#Increase"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Increase">
+  <rdfs:subClassOf rdf:resource="#Directionality"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IncreasingAction">
+  <rdfs:subClassOf rdf:resource="#Action"/>
+  <rdfs:subClassOf rdf:resource="#Increase"/>
+  <owl:disjointWith rdf:resource="#IncreasingProperty"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IncreasingProperty">
+  <rdfs:subClassOf rdf:resource="#Increase"/>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Information">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#NegativeInfo"/>
+        <rdf:Description rdf:about="#PositiveInfo"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+</owl:Class>
+
+<owl:Class rdf:about="#Instrument"/>
+
+<owl:Class rdf:about="#MutualFund">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="#DebtFund"/>
+        <rdf:Description rdf:about="#EquityFund"/>
+        <rdf:Description rdf:about="#HybridFund"/>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Instrument"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Negative"/>
+
+<owl:Class rdf:about="#NegativeAction">
+  <rdfs:subClassOf rdf:resource="#Action"/>
+  <rdfs:subClassOf rdf:resource="#Negative"/>
+  <owl:disjointWith rdf:resource="#NegativeProperty"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeAspect">
+  <rdfs:subClassOf rdf:resource="#Aspect"/>
+  <owl:disjointWith rdf:resource="#PositiveAspect"/>
+</owl:Class>
+
+<owl:Class rdf:about="#NegativeProperty">
+  <rdfs:subClassOf rdf:resource="#Negative"/>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Positive"/>
+
+<owl:Class rdf:about="#PositiveAction">
+  <rdfs:subClassOf rdf:resource="#Action"/>
+  <rdfs:subClassOf rdf:resource="#Positive"/>
+  <owl:disjointWith rdf:resource="#PositiveProperty"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveAspect">
+  <rdfs:subClassOf rdf:resource="#Aspect"/>
+</owl:Class>
+
+<owl:Class rdf:about="#PositiveProperty">
+  <rdfs:subClassOf rdf:resource="#Positive"/>
+  <rdfs:subClassOf rdf:resource="#Property"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Property"/>
+
+<owl:Class rdf:about="#Stock">
+  <rdfs:subClassOf rdf:resource="#CompanyPart"/>
+  <rdfs:subClassOf rdf:resource="#Instrument"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#issuedBy"/>
+      <owl:onClass rdf:resource="#Company"/>
+      <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#ford">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tcs">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#microsoft">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#google">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#bajaj">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tesla">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#amazon">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hyundai">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#walmart">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#tata_motors">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#apple">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#hcl">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#infosys">
+  <rdf:type rdf:resource="#Company"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cuts">
+  <rdf:type rdf:resource="#DecreasingAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#creates">
+  <rdf:type rdf:resource="#IncreasingAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#loses">
+  <rdf:type rdf:resource="#NegativeAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#cancels">
+  <rdf:type rdf:resource="#NegativeAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#wins">
+  <rdf:type rdf:resource="#PositiveAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#launches">
+  <rdf:type rdf:resource="#PositiveAction"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#rises">
+  <rdf:type rdf:resource="#IncreasingProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#decreased">
+  <rdf:type rdf:resource="#NegativeProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#underperforming">
+  <rdf:type rdf:resource="#NegativeProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#declining">
+  <rdf:type rdf:resource="#NegativeProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#increased">
+  <rdf:type rdf:resource="#PositiveProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#excellent">
+  <rdf:type rdf:resource="#PositiveProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#growing">
+  <rdf:type rdf:resource="#PositiveProperty"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#jobs">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#dividends">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#product">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#profit">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#revenue">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#deal">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#project">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#debt">
+  <rdf:type rdf:resource="#NegativeAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#losses">
+  <rdf:type rdf:resource="#NegativeAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#subsidiary">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#market_share">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#performance">
+  <rdf:type rdf:resource="#PositiveAspect"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info1">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#ford"/>
+  <isAboutAspect rdf:resource="#jobs"/>
+  <describesAspect rdf:resource="#cuts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info2">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#microsoft"/>
+  <isAboutAspect rdf:resource="#dividends"/>
+  <describesAspect rdf:resource="#cuts"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info3">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#tcs"/>
+  <isAboutAspect rdf:resource="#jobs"/>
+  <describesAspect rdf:resource="#creates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info4">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#google"/>
+  <isAboutAspect rdf:resource="#product"/>
+  <describesAspect rdf:resource="#creates"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info5">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#bajaj"/>
+  <isAboutAspect rdf:resource="#profit"/>
+  <describesAspect rdf:resource="#rises"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info6">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#tesla"/>
+  <isAboutAspect rdf:resource="#revenue"/>
+  <describesAspect rdf:resource="#rises"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info7">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#bajaj"/>
+  <isAboutAspect rdf:resource="#deal"/>
+  <describesAspect rdf:resource="#loses"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info8">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#amazon"/>
+  <isAboutAspect rdf:resource="#project"/>
+  <describesAspect rdf:resource="#cancels"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info9">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#hyundai"/>
+  <isAboutAspect rdf:resource="#debt"/>
+  <describesAspect rdf:resource="#decreased"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info10">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#walmart"/>
+  <isAboutAspect rdf:resource="#losses"/>
+  <describesAspect rdf:resource="#increased"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info11">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#tata_motors"/>
+  <isAboutAspect rdf:resource="#subsidiary"/>
+  <describesAspect rdf:resource="#underperforming"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info12">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#apple"/>
+  <isAboutAspect rdf:resource="#market_share"/>
+  <describesAspect rdf:resource="#declining"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#info13">
+  <rdf:type rdf:resource="#Information"/>
+  <isAboutCompany rdf:resource="#tcs"/>
+  <isAboutAspect rdf:resource="#deal"/>
+  <describesAspect rdf:resource="#wins"/>
+</owl:NamedIndividual>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Action">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">representing verbs in the text.</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Aspect">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeling nouns that represent entities like companies or aspects of entities
+            like profit and debt,</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Information">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any information regarding company in the form of triplet containing company name.
+            aspect of the company and the directionality of the aspect</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Instrument">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instruments are are things which a person can invest into</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAction">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eg. loses lawsuit,launches new product</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAspect">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negatively oriented entities for which a ‘down’ or ‘decrease’ movement is positive
+            (e.g., debt).</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/PositiveAspect">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consist of positively oriented entities for which an ‘up’ or ‘increase’ movement is
+            positive (e.g., profit).</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Property">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeling adjectives like lower, better, etc.,</rdfs:comment>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/info1">
+  <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Bajaj Auto posts 9% rise in Q2 profits, driven by robust domestic
+            sales."</rdfs:comment>
+</rdf:Description>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#DecreasingProperty"/>
+    <rdf:Description rdf:about="#IncreasingProperty"/>
+    <rdf:Description rdf:about="#NegativeProperty"/>
+    <rdf:Description rdf:about="#PositiveProperty"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#DecreasingAction"/>
+    <rdf:Description rdf:about="#IncreasingAction"/>
+    <rdf:Description rdf:about="#NegativeAction"/>
+    <rdf:Description rdf:about="#PositiveAction"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Bond"/>
+    <rdf:Description rdf:about="#MutualFund"/>
+    <rdf:Description rdf:about="#Stock"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

@@ -1,0 +1,113 @@
+<Instruments>
+  <Company id="ford">
+  </Company>
+  <Company id="tcs">
+  </Company>
+  <Company id="microsoft">
+  </Company>
+  <Company id="google">
+  </Company>
+  <Company id="bajaj">
+  </Company>
+  <Company id="tesla">
+  </Company>
+  <Company id="amazon">
+  </Company>
+  <Company id="hyundai">
+  </Company>
+  <Company id="walmart">
+  </Company>
+  <Company id="tata_motors">
+  </Company>
+  <Company id="apple">
+  </Company>
+  <Company id="hcl">
+  </Company>
+  <Company id="infosys">
+  </Company>
+
+  <Action id="cuts" type="DecreasingAction">
+  </Action>
+  <Action id="creates" type="IncreasingAction">
+  </Action>
+  <Action id="loses" type="NegativeAction">
+  </Action>
+  <Action id="cancels" type="NegativeAction">
+  </Action>
+  <Action id="wins" type="PositiveAction">
+  </Action>
+  <Action id="launches" type="PositiveAction">
+  </Action>
+
+  <Property id="rises" type="IncreasingProperty">
+  </Property>
+  <Property id="decreased" type="NegativeProperty">
+  </Property>
+  <Property id="underperforming" type="NegativeProperty">
+  </Property>
+  <Property id="declining" type="NegativeProperty">
+  </Property>
+  <Property id="increased" type="PositiveProperty">
+  </Property>
+  <Property id="excellent" type="PositiveProperty">
+  </Property>
+  <Property id="growing" type="PositiveProperty">
+  </Property>
+
+  <Aspect id="jobs" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="dividends" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="product" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="profit" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="revenue" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="deal" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="project" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="debt" type="NegativeAspect">
+  </Aspect>
+  <Aspect id="losses" type="NegativeAspect">
+  </Aspect>
+  <Aspect id="subsidiary" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="market_share" type="PositiveAspect">
+  </Aspect>
+  <Aspect id="performance" type="PositiveAspect">
+  </Aspect>
+
+  <Information id="info1" isAboutCompany="ford" isAboutAspect="jobs" describesAspect="cuts">
+  </Information>
+  <Information id="info2" isAboutCompany="microsoft" isAboutAspect="dividends"
+    describesAspect="cuts">
+  </Information>
+  <Information id="info3" isAboutCompany="tcs" isAboutAspect="jobs" describesAspect="creates">
+  </Information>
+  <Information id="info4" isAboutCompany="google" isAboutAspect="product" describesAspect="creates">
+  </Information>
+  <Information id="info5" isAboutCompany="bajaj" isAboutAspect="profit" describesAspect="rises">
+  </Information>
+  <Information id="info6" isAboutCompany="tesla" isAboutAspect="revenue" describesAspect="rises">
+  </Information>
+  <Information id="info7" isAboutCompany="bajaj" isAboutAspect="deal" describesAspect="loses">
+  </Information>
+  <Information id="info8" isAboutCompany="amazon" isAboutAspect="project" describesAspect="cancels">
+  </Information>
+  <Information id="info9" isAboutCompany="hyundai" isAboutAspect="debt" describesAspect="decreased">
+  </Information>
+  <Information id="info10" isAboutCompany="walmart" isAboutAspect="losses"
+    describesAspect="increased">
+  </Information>
+  <Information id="info11" isAboutCompany="tata_motors" isAboutAspect="subsidiary"
+    describesAspect="underperforming">
+  </Information>
+  <Information id="info12" isAboutCompany="apple" isAboutAspect="market_share"
+    describesAspect="declining">
+  </Information>
+  <Information id="info13" isAboutCompany="tcs" isAboutAspect="deal" describesAspect="wins">
+  </Information>
+
+</Instruments>

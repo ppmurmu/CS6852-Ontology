@@ -1,0 +1,1136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:ns1="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <rdf:Description rdf:nodeID="25">
+    <rdf:first rdf:nodeID="23"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasAspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Aspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="101">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tesla">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#ford">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument"/>
+    <rdfs:subClassOf rdf:nodeID="102"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Positive">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="19">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:rest rdf:nodeID="20"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tcs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="79">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect"/>
+    <rdf:rest rdf:nodeID="80"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="98">
+    <rdf:first rdf:nodeID="96"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="52"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="102">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="60">
+    <rdf:first rdf:nodeID="58"/>
+    <rdf:rest rdf:nodeID="61"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info10">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#walmart"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#losses"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#increased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracksBond">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#BondIndex"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracksStock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="38"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="67">
+    <rdf:first rdf:nodeID="63"/>
+    <rdf:rest rdf:nodeID="68"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="116">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tcs"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#jobs"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#creates"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="38">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="34"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#rises">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info2">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#microsoft"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#dividends"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cuts"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="88">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DebtFund"/>
+    <rdf:rest rdf:nodeID="89"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracksStock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityIndex"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#bajaj">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="29">
+    <rdf:first rdf:nodeID="27"/>
+    <rdf:rest rdf:nodeID="30"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Negative"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasStockAsset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="87">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="85"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="21"/>
+    <rdfs:subClassOf rdf:nodeID="99"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="103">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:onClass rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Positive"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="96">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="95"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="45">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+    <rdf:rest rdf:nodeID="46"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeStock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="47"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInstrument"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveMutualFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="74"/>
+    <rdfs:subClassOf rdf:nodeID="101"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issues">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="43">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="16">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="14"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info9">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hyundai"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#debt"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#decreased"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#amazon">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tata_motors"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#subsidiary"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#underperforming"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#apple"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#market_share"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#declining"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="24">
+    <rdf:first rdf:nodeID="22"/>
+    <rdf:rest rdf:nodeID="25"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info5">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#bajaj"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#profit"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#rises"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DebtFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="7"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="97">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:rest rdf:nodeID="98"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingProperty">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="105">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdf:rest rdf:nodeID="106"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="50">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:rest rdf:nodeID="51"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="111">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAction"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="92">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+    <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="82">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <rdf:rest rdf:nodeID="83"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="64">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#loses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAction"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hyundai">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="117">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="113"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="75">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#google"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#product"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#creates"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeMutualFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="43"/>
+    <rdfs:subClassOf rdf:nodeID="100"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="115">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+    <rdf:rest rdf:nodeID="116"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#BondIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MarketIndex"/>
+    <rdfs:subClassOf rdf:nodeID="92"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Aspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="81"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="100">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="59">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="63">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="94">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+    <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="36">
+    <rdf:first rdf:nodeID="32"/>
+    <rdf:rest rdf:nodeID="37"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#creates">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="46">
+    <rdf:first rdf:nodeID="44"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Action"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Negative"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info1">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#ford"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#jobs"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cuts"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="2">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#profit">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#performance">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MarketIndex"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cancels">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAction"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="107">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="104"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#bajaj"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#deal"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#loses"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="21">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="19"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="49">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="48"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#trackedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="81">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="79"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Financial modelling concerned with stocks, mutual funds and financial information</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="39">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="28">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="69">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="65"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info6">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tesla"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#revenue"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#rises"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#market_share">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="12">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasBondAsset"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MarketIndex"/>
+    <rdfs:subClassOf rdf:nodeID="93"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#HybridFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="16"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DebtFund"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityFund"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="84">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="82"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#belongTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="10">
+    <rdf:first rdf:nodeID="8"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="53">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="66">
+    <rdf:first rdf:nodeID="62"/>
+    <rdf:rest rdf:nodeID="67"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="5">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdf:rest rdf:nodeID="6"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Action">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="54">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="68">
+    <rdf:first rdf:nodeID="64"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#declining">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="33">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="86">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="32">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#revenue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="11"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInstrument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="42"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#google">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="22">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="73">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="71"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="1">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+    <rdf:rest rdf:nodeID="2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://inferrences">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="70">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="57">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="55"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="112">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+    <owl:members rdf:nodeID="108"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Aspect"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#underperforming">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#project">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#wins">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAction"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tcs"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#deal"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#wins"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="3">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Action"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="47">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="45"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="61">
+    <rdf:first rdf:nodeID="59"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issues"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/info1">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">"Bajaj Auto posts 9% rise in Q2 profits, driven by robust domestic
+            sales."</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="3"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#walmart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Store">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Negative">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="26">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="24"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Property">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeling adjectives like lower, better, etc.,</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#info8">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <ns1:isAboutCompany rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#amazon"/>
+    <ns1:isAboutAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#project"/>
+    <ns1:describesAspect rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cancels"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Information">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">any information regarding company in the form of triplet containing company name.
+            aspect of the company and the directionality of the aspect</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="11">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="9"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#launches">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="65">
+    <rdf:first rdf:nodeID="57"/>
+    <rdf:rest rdf:nodeID="66"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInstrument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="73"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Action"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#microsoft">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="74">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="77">
+    <rdf:first rdf:nodeID="75"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Property">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="93">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tracks"/>
+    <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Aspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="58">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="27">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#describesAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="18">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:nodeID="17"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="85">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeInfo"/>
+    <rdf:rest rdf:nodeID="86"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAction">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Action"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Positive"/>
+    <owl:disjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#losses">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="71">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+    <rdf:rest rdf:nodeID="72"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="62">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="60"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasBondAsset">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+    <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasStockAsset"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutAspect">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Aspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#cuts">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingAction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="23">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutAspect"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="91">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:unionOf rdf:nodeID="88"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Subsidary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://anonymous">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#apple">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#jobs">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="72">
+    <rdf:first rdf:nodeID="70"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="42">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="40"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#tata_motors">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Directionality">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="84"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="37">
+    <rdf:first rdf:nodeID="33"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInfo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="69"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="40">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+    <rdf:rest rdf:nodeID="41"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="55">
+    <rdf:first rdf:nodeID="53"/>
+    <rdf:rest rdf:nodeID="56"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="95">
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="109">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingAction"/>
+    <rdf:rest rdf:nodeID="110"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="44">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#issuedBy"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="14">
+    <rdf:first rdf:nodeID="12"/>
+    <rdf:rest rdf:nodeID="15"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#infosys">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#deal">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="83">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="113">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingProperty"/>
+    <rdf:rest rdf:nodeID="114"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasSentimentValue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument"/>
+    <rdfs:subClassOf rdf:nodeID="103"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#AtomicInstrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="76">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+    <rdf:rest rdf:nodeID="77"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="78">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="76"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="104">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+    <rdf:rest rdf:nodeID="105"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="90">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#HybridFund"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="20">
+    <rdf:first rdf:nodeID="18"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="7">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="5"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hcl">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Company"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#decreased">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeProperty"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Increase"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveStock">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="78"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveInstrument"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="110">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAction"/>
+    <rdf:rest rdf:nodeID="111"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#debt">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#NegativeAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="35">
+    <rdf:first rdf:nodeID="31"/>
+    <rdf:rest rdf:nodeID="36"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#product">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="4">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument"/>
+    <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Bond"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/PositiveAspect">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consist of positively oriented entities for which an ‘up’ or ‘increase’ movement is
+            positive (e.g., profit).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="99">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="97"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="31">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="29"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Action">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">representing verbs in the text.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#subsidiary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="56">
+    <rdf:first rdf:nodeID="54"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#increased">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Decrease"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasInstrument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isPartofFund"/>
+    <rdfs:domain rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdfs:range rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="30">
+    <rdf:first rdf:nodeID="28"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="13">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+    <owl:onProperty rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#hasStockAsset"/>
+    <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="9">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund"/>
+    <rdf:rest rdf:nodeID="10"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="41">
+    <rdf:first rdf:nodeID="39"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="80">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="106">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Stock"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Aspect">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modeling nouns that represent entities like companies or aspects of entities
+            like profit and debt,</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="108">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#DecreasingAction"/>
+    <rdf:rest rdf:nodeID="109"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="114">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#IncreasingProperty"/>
+    <rdf:rest rdf:nodeID="115"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="15">
+    <rdf:first rdf:nodeID="13"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Branch">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#CompanyPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MarketIndex">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:subClassOf rdf:nodeID="94"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAction">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eg. loses lawsuit,launches new product</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Information">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="87"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="51">
+    <rdf:first rdf:nodeID="49"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="6">
+    <rdf:first rdf:nodeID="4"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/NegativeAspect">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negatively oriented entities for which a ‘down’ or ‘decrease’ movement is positive
+            (e.g., debt).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isPartofFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="48">
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#dividends">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveAspect"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="89">
+    <rdf:first rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#EquityFund"/>
+    <rdf:rest rdf:nodeID="90"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="17">
+    <owl:inverseOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#isAboutCompany"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#MutualFund">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:equivalentClass rdf:nodeID="91"/>
+    <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#Instrument"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="34">
+    <rdf:first rdf:nodeID="26"/>
+    <rdf:rest rdf:nodeID="35"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#growing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#excellent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling#PositiveProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.semanticweb.org/violetboy/ontologies/2024/9/FinancialModelling/Instrument">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instruments are are things which a person can invest into</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="52">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:intersectionOf rdf:nodeID="50"/>
+  </rdf:Description>
+</rdf:RDF>
