@@ -10,13 +10,15 @@ Info 1 : TCS profit jumped 10% in last quarter
 Info 2 : HCL debt reduced by 5 %
 
 The above pieces of information can be converted into equivalent triplets ("TCS", "profit", "jumped") and ("HCL", "debt", "reduced") respectively.
-The above information can be stored in an ontology and can be used for reasoning like: • Is "Info 1" a positively info?
-• Which company is affected by it?
-• Which Mutual funds contain the stock of the affected company?
+The above information can be stored in an ontology and can be used for reasoning like: 
+1. Is "Info 1" a positively info?
+2. Which company is affected by it?
+3. Which Mutual funds contain the stock of the affected company? 
+
 Our attempt is to use ontology to model this basic information. Modelling restriction:
-• To reduce the complexity of model, only information which are in above triplet form is considered for modelling.
-• Only binary classification (Negative and Positive labels) are considered for classifying the information and instruments.
-• Only bond, stocks and mutual funds are considered as instruments
+1. To reduce the complexity of model, only information which are in above triplet form is considered for modelling.
+2. Only binary classification (Negative and Positive labels) are considered for classifying the information and instruments.
+3. Only bond, stocks and mutual funds are considered as instruments
 
 
 
